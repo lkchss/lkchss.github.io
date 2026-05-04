@@ -116,6 +116,30 @@ const photoEntries = {
     date: 'March 2025',
     description: 'I love Mexico, I love tacos de camaron, I love beaches, I love the sun...',
     photos: ['IMG_0950.jpg']
+  },
+  9: {
+    title: 'Seattle, Washington',
+    date: 'January 2025',
+    description: '',
+    photos: ['seattle0125.jpg']
+  },
+  10: {
+    title: 'Seattle, Washington',
+    date: 'January 2024',
+    description: '',
+    photos: ['seattle0124.jpg']
+  },
+  11: {
+    title: 'Seattle, Washington',
+    date: 'November 2023',
+    description: '',
+    photos: ['seattle1123.jpg']
+  },
+  12: {
+    title: 'Honolulu, Hawaii',
+    date: 'September 2023',
+    description: '',
+    photos: ['honolulu,hi0923.jpg']
   }
 };
 
@@ -182,13 +206,13 @@ function openLightbox() {
   // Preload image and show when ready
   const tempImg = new Image();
   tempImg.onload = () => {
-    img.src = `../images/${photo}`;
+    img.src = `images/${photo}`;
     document.getElementById('lightbox-date').textContent = `${entry.title} — ${entry.date}`;
     document.getElementById('lightbox-entry').textContent = entry.description;
     lightbox.classList.remove('hidden');
     document.body.style.overflow = 'hidden';
   };
-  tempImg.src = `../images/${photo}`;
+  tempImg.src = `images/${photo}`;
 }
 
 function closeLightbox() {
